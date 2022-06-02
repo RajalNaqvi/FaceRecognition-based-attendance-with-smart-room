@@ -9,6 +9,19 @@ from . import utils
 class TrainDataSet():
     
     def __init__(self, model:str, images_dir:str, encoding_dir:str):
+        
+        """ Train the provided images based on the provided model.
+        Args:
+            model (str): Path of Model file ex. c:/facenet_keras.md5
+            images_dir (str): path for images with corresponding candidate names:
+                            ex. dataset/persons/
+                                person will based on following tree structure 
+                                        persons/candidate1/*.jpg
+                                        persons/candidate2/*.jpg
+            encoding_dir (str): path for encoding files to store ex. dataset/encodings
+            
+        """
+        
         self.model = model
         self.image = images_dir
         self.encoding = encoding_dir
